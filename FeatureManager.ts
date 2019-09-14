@@ -1,13 +1,13 @@
 import { Request, RequestHandler, Response } from 'express'
-import { AppConfigurationClient } from "@azure/app-configuration";
+import { AppConfigurationClient } from "@azure/app-configuration"
 import { NextFunction } from 'connect'
 
-interface CachedEntry {
+export interface CachedEntry {
     fetched: Date
     value: any
     key: string
 }
-class FeatureManager {
+export class FeatureManager {
     cacheRefreshRate: number = 30000
     cache: { [key: string]: CachedEntry } = {}
     connectionString: string
