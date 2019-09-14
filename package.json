@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --outDir dist",
     "clean": "rm -rf dist",
-    "test": "ts-mocha tests/*.test.ts",
+    "test": "ts-mocha tests/*.test.ts --reporter=xunit --reporter-options output=test-results.xml",
     "coverage": "nyc npm run test"
   },
   "author": "Andrew Kanieski <andrew.kanieski@microsoft.com> <andrew.legacy@gmail.com>",
