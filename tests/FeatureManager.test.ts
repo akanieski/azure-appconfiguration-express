@@ -162,19 +162,19 @@ describe('Feature manager', () => {
         })
 
         it('should pull from azure if exceeded cache refresh limit', async () => {
-            let mock = ImportMock.mockClass(AzureModule, 'AppConfigurationClient')
+            let mock = ImportMock.mockClass<AzureModule.AppConfigurationClient>(AzureModule, 'AppConfigurationClient')
             let featureManager = new FeatureManager("TEST")
             let oldEntry = <CachedEntry>{
                 fetched: new Date('2000-01-01'), // purposely old date
                 value: false,
                 key: "testKey"
             }
-            let mockAzureCall: Promise<CachedEntry> = Promise.resolve(<CachedEntry>{
+            
+            mock.mock("getConfigurationSetting", Promise.resolve(<CachedEntry>{
                 fetched: new Date(),
                 key: "testKey",
                 value: '{"enable": true}'
-            })
-            mock.mock("getConfigurationSetting", mockAzureCall)
+            }))
 
             featureManager.cache = {
                 "testKey": oldEntry
