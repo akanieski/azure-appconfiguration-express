@@ -169,11 +169,12 @@ describe('Feature manager', () => {
                 value: false,
                 key: "testKey"
             }
-            mock.mock("getConfigurationSetting", Promise.resolve({
+            let mockAzureCall: Promise<CachedEntry> = Promise.resolve(<CachedEntry>{
                 fetched: new Date(),
                 key: "testKey",
                 value: '{"enable": true}'
-            }))
+            })
+            mock.mock("getConfigurationSetting", mockAzureCall)
 
             featureManager.cache = {
                 "testKey": oldEntry
