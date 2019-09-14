@@ -1,5 +1,5 @@
 {
-  "name": "appconfiguration-express",
+  "name": "azure-appconfiguration-express",
   "version": "0.1.0",
   "description": "Leverage Azure App Configuration to apply feature toggles to express routes",
   "main": "FeatureManager.js",
