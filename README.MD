@@ -1,4 +1,5 @@
 # Azure App Configuration + Express 
+[![Build status](https://dev.azure.com/akanieski/azure-appconfiguration-express/_apis/build/status/azure-appconfiguration-express-CI)](https://dev.azure.com/akanieski/azure-appconfiguration-express/_build/latest?definitionId=3)
 
 Azure App Configuration is a managed service that helps developers centralize their application configurations simply and securely.
 
