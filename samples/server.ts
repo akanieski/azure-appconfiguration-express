@@ -1,10 +1,9 @@
-import * as express from 'express'
-
 import FeatureManager from '../FeatureManager'
+import express from 'express'
 
 const app = express()
 const port = 3000
-const connectionString = process.env['AZ_CONFIG_CONNECTION']
+const connectionString = process.env['AZ_CONFIG_CONNECTION']!
 const features = new FeatureManager(connectionString)
 
 

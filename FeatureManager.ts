@@ -46,7 +46,7 @@ class FeatureManager {
         this.cache[key] = <CachedEntry>{
             fetched: new Date(),
             key: key,
-            value: JSON.parse(configurationSetting.value).enabled
+            value: JSON.parse(configurationSetting.value!).enabled
         }
         return this.cache[key].value
     }

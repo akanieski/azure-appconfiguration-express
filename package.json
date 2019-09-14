@@ -4,7 +4,8 @@
   "description": "Leverage Azure App Configuration to apply feature toggles to express routes",
   "main": "FeatureManager.js",
   "scripts": {
-    
+    "build": "tsc --outDir dist",
+    "clean": "rm -rf dist"
   },
   "author": "Andrew Kanieski <andrew.kanieski@microsoft.com> <andrew.legacy@gmail.com>",
   "license": "ISC",
