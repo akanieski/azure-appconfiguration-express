@@ -1,6 +1,6 @@
 import * as AzureModule from '@azure/app-configuration'
 
-import { FeatureManager, CachedEntry } from '../FeatureManager'
+import { FeatureManager, CachedEntry } from '../src'
 import { ImportMock } from 'ts-mock-imports'
 import * as express from 'express'
 import assert from 'assert'

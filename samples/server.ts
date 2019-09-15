@@ -1,4 +1,4 @@
-import FeatureManager from '../FeatureManager'
+import FeatureManager from '../src/FeatureManager'
 import express from 'express'
 
 const app = express()
